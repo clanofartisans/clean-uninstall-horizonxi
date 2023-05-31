@@ -27,3 +27,6 @@ if ($path) {
     Write-Output "Cleaning up launcher configuration..."
     Remove-Item -path $path -recurse -force -ErrorAction 'Ignore'
 }
+
+Write-Host -NoNewLine 'Press any key to continue...';
+$null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown');
